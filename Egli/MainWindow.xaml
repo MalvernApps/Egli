@@ -1,0 +1,46 @@
+﻿<Window x:Class="Egli.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Egli"
+        mc:Ignorable="d"
+        Title="Egli Simulator" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Width="120">Frequency</Label>
+                <TextBox Width="120" x:Name="freq">50.3</TextBox>
+                <Label Width="120" >MHz</Label>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Width="120">Tx Height</Label>
+                <TextBox Width="120" x:Name="txheight">1</TextBox>
+                <Label Width="120" >meters</Label>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Width="120">Rx Height</Label>
+                <TextBox Width="120" x:Name="rxheight">10</TextBox>
+                <Label Width="120" >meters</Label>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Width="120">Distance</Label>
+                <TextBox Width="120" x:Name="distance">17.7</TextBox>
+                <Label Width="120" >miles</Label>
+            </StackPanel>
+
+            <Button Width="120" Click="oncalc">Calculate</Button>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <Label Width="120">Attenuation</Label>
+                <TextBox Width="120" x:Name="attenuation">not set</TextBox>
+                <Label Width="120" >dB</Label>
+            </StackPanel>
+
+        </StackPanel>
+        
+    </Grid>
+</Window>
