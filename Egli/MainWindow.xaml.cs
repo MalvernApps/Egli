@@ -46,5 +46,28 @@ namespace Egli
             attenuation.Text = att.ToString();
 
         }
+
+        private void oncalcdist(object sender, RoutedEventArgs e)
+        {
+            double f = double.Parse(freq.Text);
+            double txh = double.Parse(txheight.Text);
+            double rxh = double.Parse(rxheight.Text);
+            double dist = double.Parse(distance.Text);
+
+            double mtof = 3.28084;
+
+            //double att = 117 + (40 * Math.Log10(dist)) + (20 * Math.Log10(f)) - (20 * Math.Log10(mtof * mtof * txh * rxh));
+
+            double att = double.Parse(attenuation.Text);
+
+            dist = att - 117 - (20 * Math.Log10(f)) + (20 * Math.Log10(mtof * mtof * txh * rxh));
+            dist /= 40.0;
+
+            dist = Math.Pow(10, dist);
+
+            distance.Text = dist.ToString();
+
+           
+        }
     }
 }

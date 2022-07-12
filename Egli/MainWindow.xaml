@@ -32,7 +32,8 @@
                 <Label Width="120" >miles</Label>
             </StackPanel>
 
-            <Button Width="120" Click="oncalc">Calculate</Button>
+            <Button Width="120" Click="oncalc">Calculate Loss</Button>
+            <Button Width="120" Click="oncalcdist" Margin="10">Calculate Distance</Button>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
                 <Label Width="120">Attenuation</Label>
